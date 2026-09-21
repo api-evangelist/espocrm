@@ -1,23 +1,85 @@
 aid: espocrm
+
 name: EspoCRM
-description: 'EspoCRM is a company surfaced via the API Evangelist harvest backlog (source: crm) and added
-  to the network as a stub for full-pipeline profiling.'
+
+image: http://www.espocrm.com/images/free-crm-social.jpg
+
+description: EspoCRM is an open-source Customer Relationship Management (CRM) platform that enables businesses to manage their sales, marketing,
+  and customer support processes. It offers a flexible, customizable solution with features such as lead management, opportunity tracking, activity
+  streams, and integration capabilities. EspoCRM provides a modern web interface, role-based access control, and extensible architecture through
+  extensions and API access, allowing developers to build custom workflows and integrate with external services. The platform is designed for
+  small to medium-sized enterprises seeking a cost-effective, self-hosted CRM solution.
+
 url: https://raw.githubusercontent.com/api-evangelist/espocrm/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:crm
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+
+x-tier-reason: enrichment pass 2026-09-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-21'
+
 modified: '2026-09-21'
+
 tags:
 - Company
-apis: []
+- CRM
+- OpenSource
+- Sales
+- Marketing
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: PrivacyPolicy
+  url: https://www.espocrm.com/privacy-policy/
+- type: Pricing
+  url: https://www.espocrm.com/plans/
+- type: ChangeLog
+  url: https://www.espocrm.com/extensions/sales-pack/release-notes/
+- type: DomainSecurity
+  url: security/espocrm-domain-security.yml
 - type: Website
-  url: https://espocrm.com/
+  url: https://www.espocrm.com/
+- type: Documentation
+  url: https://www.espocrm.com/documentation/
+- type: APIReference
+  url: https://www.espocrm.com/espocrm-api/
+- type: Support
+  url: https://www.espocrm.com/support/
+- type: Blog
+  url: https://www.espocrm.com/blog/
+- type: TermsOfService
+  url: https://www.espocrm.com/tos/
+
+apis:
+- name: EspoCRM API
+  description: API reference for EspoCRM, providing CRUD operations for CRM entities.
+  humanURL: https://docs.espocrm.com/
+  baseURL: null
+  aid: espocrm:espocrm-api
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: Documentation is publicly available but no OpenAPI or other machine‑readable spec was found.
+  evidence:
+  - url: https://docs.espocrm.com/
+    status: 200
+  checked: '2026-09-21'
+
+x-enrichment:
+  date: '2026-09-21'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
