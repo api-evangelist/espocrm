@@ -1,0 +1,21 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://composio.dev/toolkits/espocrm
+checked:
+- https://composio.dev/toolkits/espocrm
+- https://monid.ai/tools/espocrm
+- https://n8n.io/integrations/espocrm/
+- https://zapier.com/apps/espocrm/integrations
+summary: null
+marketplace_apps:
+- marketplace: composio
+  channel: agent-gateway
+  app: espocrm
+  url: https://composio.dev/toolkits/espocrm
+  identity: action-prefix
+  actions:
+  - key: ESPOCRM_GET_APP_USER
+  - key: ESPOCRM_GET_METADATA
+edges: []
+templates: []
